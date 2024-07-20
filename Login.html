@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-</head>
+<html>
 <body>
-<h1>
-    Login Page
-</h1>
+<H1><Center> LOGIN PAGE</Center></H1>
 <br>
-<label for="fname">UserName:</label><input type="text">
-<br><br>
-<label for="fname">Password:</label><input type="password">
-<br><br>
-<form action="https://www.google.co.in/"><input type="submit"></form>
+<style>
+  .LoginDiv
+  {
+    
+    width: 280px;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    border-radius: 20px;
+  }
+  .LoginButton {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(156, 125, 22);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+</style>
 
 
+<form action ="https://www.google.co.in/">
+  <div class="LoginDiv"></div>
+  
+  <label for="fname">USER NAME:</label>
+  <br>
+  <input type="text" id="fname" name="fname" value="">
+  <br>
+  <br>
+  <label for="lname">PASSWORD:</label>
+  <br>
+  <input type="password" id="lname" name="lname" value="">
+  <br><br>
+  <input type="submit" class="LoginButton" value="LOGIN">
+</form> 
 
-<br>
+
 </body>
 </html>
