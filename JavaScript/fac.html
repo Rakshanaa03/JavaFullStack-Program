@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorial Calculator</title>
+    <title>Factorial</title>
 </head>
+<style>
+body{
+    background-color: lightgray;
+}
+h1{
+    color: black;
+}
+label{
+    color: black;
+}
+script{
+    background-color: 2px darkgrey;
+}
+</style>
 <body>
-    <h1>Factorial Calculator</h1>
+    <h1>Factorial</h1>
+    <hr><br>
     <form onsubmit="return false;">
         <label for="number">Enter a number:</label>
         <input type="number" id="number" required>
@@ -20,7 +35,7 @@
     const resultElement = document.getElementById('result');
 
     if (number === '' || isNaN(number)) {
-        resultElement.textContent = 'Please enter a valid number.';
+        resultElement.textContent = 'please enter a valid number.';
         return;
     }
 

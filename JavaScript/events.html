@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Events</h1>
+  <button id="click-me">Click Me</button><br>
+  <button id="dbl-click-me">Double Click Me</button><br>
+  <input id="input-field" type="text" placeholder="Type something"><br>
+  <div id="mouse-over-me">Mouse Over Me</div>
+  <select id="select-me">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+  </select>
+  <form id="submit-me">
+    <input type="text" placeholder="Type something">
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    document.getElementById('click-me').addEventListener('click', function() {
+      alert('You clicked the button!');
+    });
+
+    document.getElementById('dbl-click-me').addEventListener('dblclick', function() {
+      alert('You double clicked the button!');
+    });
+
+    document.getElementById('input-field').addEventListener('keypress', function(event) {
+      console.log('Key press event triggered!');
+      console.log('You pressed the key: ' + event.key);
+    });
+    document.getElementById('mouse-over-me').addEventListener('mouseover', function() {
+      console.log('Mouse over event triggered!');
+      this.style.backgroundColor = 'yellow';
+    });
+    document.getElementById('submit-me').addEventListener('submit', function(event) {
+      console.log('Submit event triggered!');
+      event.preventDefault(); 
+      alert('You submitted the form!');
+    });
+  </script>
+</body>
+</html>
