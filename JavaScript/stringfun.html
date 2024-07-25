@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>string function</title>
-</head>
-<style>
-    body{
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>String</title>
+  <script>
+    function calc() {
+      var a = document.getElementById("n1").value;
+      let app = document.querySelector("#ResultDiv");
+      app.innerHTML = "";
 
-        background-color: rgb(179, 219, 179);
-        color: blue;
+      if (a.trim() === "") {
+        return; 
+      }
+
+      let methods = [
+        "Length: " + a.length,
+        "charAt: " + a.charAt(0),
+        "slice: " + a.slice(0, a.length - 1),
+        "substring: " + a.substring(0, a.length - 2),
+        "substr: " + a.substr(4, a.length),
+        "toUpperCase: " + a.toUpperCase(),
+        "toLowerCase: " + a.toLowerCase(),
+        "concat: " + a.concat("Hello"),
         
+      ];
+
+      let nodes = methods.map((lang) => {
+        let li = document.createElement("li");
+        li.textContent = lang;
+        return li;
+      });
+
+      app.append(...nodes);
     }
-</style>
+    function clearResults() {
+      let app = document.querySelector("#ResultDiv");
+      app.innerHTML = ""; 
+    }
+  </script>
+</head>
 <body>
-
-   
-    <a align="right" href="https://www.w3schools.com/js/js_string_methods.asp#mark_length">String length</a><br>
-    <a href="https://www.w3schools.com/js/js_string_methods.asp#mark_charat">String charAt()</a><br>
-    <a href="https://www.w3schools.com/js/js_string_methods.asp#mark_slice">String slice()</a><br>
-    <a href="https://www.w3schools.com/js/js_string_methods.asp#mark_substring">String substring()</a><br>
-    <a href="https://www.w3schools.com/js/js_string_methods.asp#mark_substr">String substr()</a><br>
-    <p align="right">String</p>
-
+  <h1>Enter String:</h1>
+  <input
+    type="text"
+    id="n1"
+    onfocus="this.value=''"
+    placeholder="Enter the String"
+    oninput="clearResults()" <!-- Added event listener -->
+  <br />
+  <br />
+  <br />
+  <button onclick="calc()">Check</button>
+  <ul id="ResultDiv"></ul>
 </body>
 </html>
