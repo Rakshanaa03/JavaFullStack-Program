@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            font-family: Arial, sans-serif;
+    
+        }
+        .calculator {
+            background-color: gray;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+        }
+        .display {
+            background-color: white;
+            color: #fff;
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            border: 2px solid black;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            
+        }
+        .button {
+            background-color: darkcyan;
+            border: 2px solid black;
+            padding: 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+           
+        }
+        .button:active {
+            background-color: #ddd;
+            border: 2px solid black;
+
+        }
+        .button.operator {
+            background-color: darkcyan;
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <left><div class="display" id="display">0</div></left>
+        <div class="buttons">
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="inputValue('/')">%</button>
+            <button class="button" onclick="inputValue('*')">←</button>
+            <button class="button" onclick="deleteLast()">/</button>
+            <button class="button" onclick="inputValue('7')">7</button>
+            <button class="button" onclick="inputValue('8')">8</button>
+            <button class="button" onclick="inputValue('9')">9</button>
+            <button class="button operator" onclick="inputValue('-')">*</button>
+            <button class="button" onclick="inputValue('4')">4</button>
+            <button class="button" onclick="inputValue('5')">5</button>
+            <button class="button" onclick="inputValue('6')">6</button>
+            <button class="button operator" onclick="inputValue('+')">-</button>
+            <button class="button" onclick="inputValue('1')">1</button>
+            <button class="button" onclick="inputValue('2')">2</button>
+            <button class="button" onclick="inputValue('3')">3</button>
+            <button class="button" onclick="calculateResult()" rowspan="2">+</button>
+            <button class="button" onclick="inputValue('0')" colspan="2">00</button>
+            <button class="button" onclick="inputValue('.')">0</button>
+            <button class="button" onclick="inputValue('.')">.</button>
+            <button class="button" onclick="inputValue('.')">=</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<h1>Angular Structural </h1>
+<input type="text" (click)="clicking()" />
+<b>Welcome{{ fname }}</b>
+<button (click)="changeFlag()">Hide div</button>
+<div *ngIf="flag">
+<h1>Developer</h1>
+</div>
+<div>
+<ul>
+<li *ngFor="let arrr of arr" (click)="clicked(arrr)">
+{{ arrr }}
+</li>
+<br />
+{{
+selectedVal
+}}
+</ul>
+<br>
+<b>
+  you have selected : {{selectedVehicle}}</b>
+</b>
+<br>
+<div [ngSwitch]="selectedVehicle">
+  <font color="green" *ngSwitchCase="'TwoWheeler'">Bike</font>
+  <font color="green" *ngSwitchCase="'TwoWheeler'">Auto</font>
+  <font color="green" *ngSwitchCase="'TwoWheeler'">Car</font>
+  <font color="green" *ngSwitchCase="'TwoWheeler'">Invalid</font>
+</div>
