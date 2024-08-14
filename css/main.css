@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Space+Grotesk&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.top-div {
+    min-height: 5vh;
+    background-color: #c7003d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    flex-wrap: wrap;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.top-div ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.nav-area {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 9vh;
+    background: #e40046;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.nav-area h3 {
+    cursor: pointer;
+}
+
+.input-area {
+    width: 680px;
+}
+
+.input-area input {
+    width: 480px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 13px;
+}
+
+.input-area button {
+    height: 40px;
+    background-color: black;
+    color: white;
+    width: 120px;
+    border: none;
+    cursor: pointer;
+}
+
+.input-area button:hover {
+    background-color: rgb(32, 31, 31);
+}
+
+.main-div {
+    margin-top: 10px;
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 70px;
+}
+
+.category-tab {
+    min-height: 95vh;
+    width: 220px;
+    background: white;
+    box-shadow: 0px 0px 12px rgb(211, 221, 219);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+    margin-right: 10px;
+}
+
+.category-tab p {
+    margin: 25px 0 8px 0;
+    text-transform: uppercase;
+}
+
+.category-tab ul {
+    padding: 0 8px;
+}
+
+.category-tab ul li {
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.label-icon {
+    height: 28px;
+    width: 28px;
+    background-color: #d6e4ec;
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-right: 8px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    color: #cbcbcb !important;
+    margin-top: 6px;
+}
+
+.search-list li {
+    font-size: 0.9rem;
+    color: #8c8c8c;
+}
+
+li {
+    list-style: none;
+}
+
+.center-img {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-img {
+    height: 330px;
+    width: 886px;
+    object-fit: fill;
+}
+
+.pin-card {
+    height: 350px;
+    width: 250px;
+    background: white;
+    box-shadow: 0px 0px 12px rgb(211, 221, 219);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.delivery-img {
+    background: url('https://i1.sdlcdn.com/img/artboardNext.png');
+    background-size: cover;
+    background-position: -5px -4px;
+    width: 80px;
+    height: 88px;
+    margin: 55px auto 10px;
+    transform: scale(1.5);
+}
+
+.pin-card p {
+    color: #8c8c8c;
+}
+
+.pin-card input {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    background: #f7f5f5;
+    padding: 0 7px;
+}
+
+#btn-1 {
+    width: 140px;
+    height: 35px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+#btn-2 {
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+    color: #8c8c8c;
+    border: none;
+    outline: none;
+}
+
+#btn-2:hover {
+    color: black;
+}
+
+#btn-1:hover {
+    background-color: rgb(32, 31, 31);
+}
+
+.card-images {
+    width: 200px;
+    margin: 6px 0px 4px 15px
+}
+
+.trending-categories {
+    margin-left: 225px;
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.trending-categories .card {
+    height: 360px;
+    width: 230px;
+    background: white;
+    margin: auto 1px;
+}
+
+.trending-categories .card:hover {
+    box-shadow: 4px 0px 22px rgb(211, 221, 219);
+}
+
+.trending-categories .card p {
+    font-size: 0.8rem;
+    padding: 3px 15px;
+    color: #8c8c8c;
+}
+
+.price-cut {
+    text-decoration: line-through;
+    color: #8c8c8c;
+    padding: 3px 3px 3px 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.discount {
+    border: solid 1px #8c8c8c;
+    color: #8c8c8c;
+    padding: 2px 4px;
+    margin-left: 3px;
+    font-size: 0.8rem;
+}
+
+.product-list {
+    min-height: 70vh;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+}
+
+.product-list .card p {
+    font-size: 0.8rem;
+    padding: 3px 15px;
+    color: #8c8c8c;
+}
+
+.product-list .card {
+    height: 360px;
+    width: 230px;
+    background: white;
+    margin: 10px 20px;
+}
+
+.product-list .card:hover {
+    cursor: pointer;
+    box-shadow: 4px 0px 22px 2px rgb(211, 221, 219);
+}
+
+.about {
+    min-height: 40vh;
+    padding: 20px 100px;
+}
+
+.about h3 {
+    color: #0f1124;
+    margin: 20px auto;
+}
+
+.about p {
+    color: #747474;
+}
+
+.copy-right {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 80px;
+    color: #1f1d1d;
+}
+
+.copy-right p {
+    font-size: 14px;
+}
+
+
+/* Login form CSS */
+
+.login {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    border-radius: 10px;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+
+.form h1 {
+    margin: 20px auto;
+    color: #c7003d;
+    font-size: 43px;
+}
+
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 0 15px;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.form input:focus {
+    background: #dbdbdb;
+}
+
+.form button {
+    margin-top: 12px;
+    text-transform: uppercase;
+    background: #c7003d;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1350px) {
+    .top-div {
+        flex-direction: column;
+        text-align: center;
+    }
+    .top-div ul li {
+        margin: 10px 10px;
+    }
+    .input-area {
+        margin: 20px 20px;
+    }
+    .input-area input {
+        width: 50%;
+    }
+    .input-area button {
+        width: 25%;
+    }
+    #main-img {
+        width: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+    .category-tab {
+        display: none;
+    }
+    .pin-card {
+        display: none;
+    }
+    .h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 30px auto;
+    }
+    .trending-categories {
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+        min-height: 80vh;
+    }
+    .trending-categories .card {
+        margin: 12px auto;
+    }
+    .about {
+        padding: 20px 20px;
+    }
+    .copy-right {
+        padding: 10px;
+    }
+    .copy-right p {
+        font-size: 0.7rem;
+    }
+}

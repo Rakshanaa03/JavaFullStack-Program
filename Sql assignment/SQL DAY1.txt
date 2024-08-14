@@ -1,0 +1,85 @@
+CREATE TABLE tbl_employee_new (
+  eid NUMBER(5),
+  ename VARCHAR2(20),
+  esalary NUMBER(5)
+);
+
+
+Table created.
+
+INSERT INTO tbl_employee_new (eid, ename, esalary)
+VALUES (101, 'Rakshanaa', 5000);
+
+INSERT INTO tbl_employee_new (eid, ename, esalary)
+VALUES (102, 'sudhi', 7000);
+
+INSERT INTO tbl_employee_new (eid, ename, esalary)
+VALUES (103, 'dhiya', 8000);
+
+
+
+1 row(s) inserted.
+1 row(s) inserted.
+1 row(s) inserted.
+
+SELECT * FROM tbl_employee_new WHERE esalary > 4000;
+
+
+EID  ENAME   ESALARY
+101  rakshnaa    5000
+102  sudhi      7000
+103  dhiya      8000
+
+SELECT DISTINCT eid FROM tbl_employee_new;
+
+
+EID
+101
+102
+103
+   
+SELECT * FROM tbl_employee_new WHERE ename != 'Bharathi';
+
+
+EID  ENAME  ESALARY
+101  rakshanaa  5000
+103  dhiya    8000
+
+SELECT * FROM tbl_employee_new;
+
+
+EID  ENAME     ESALARY
+101  rakshanaa     5000
+102  sudhi  7000
+103  dhiya     8000
+   
+UPDATE tbl_employee_new SET esalary = 7000 WHERE eid = 102;
+COMMIT;
+ 
+
+1 row(s) updated.
+
+UPDATE tbl_employee_new SET esalary = 8000, ename = 'dhiya' WHERE eid = 103;
+COMMIT;
+
+
+1 row(s) updated.
+
+DELETE FROM tbl_employee_new WHERE eid = 102;
+COMMIT;
+1 row(s) deleted.
+
+
+SELECT * FROM tbl_employee_new;
+EID  ENAME  ESALARY
+101  rakshanaa  5000
+103  dhiya    8000
+
+SELECT * FROM tbl_employee_new WHERE eid IN (101, 102);
+
+
+EID  ENAME  ESALARY
+101  rakshanaa  5000
+SELECT * FROM tbl_employee_new WHERE eid NOT IN (101, 102);
+EID  ENAME  ESALARY
+103  dhiya     8000
